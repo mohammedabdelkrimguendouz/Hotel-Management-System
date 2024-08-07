@@ -1,0 +1,9 @@
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\bin\Debug\Hotel_Buisness.dll
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\bin\Debug\Hotel_Buisness.pdb
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\obj\Debug\Hotel_Buisness.csproj.AssemblyReference.cache
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\obj\Debug\Hotel_Buisness.csproj.CoreCompileInputs.cache
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\obj\Debug\Hotel_Buisness.dll
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\obj\Debug\Hotel_Buisness.pdb
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\bin\Debug\Hotel_DataAccess.dll
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\bin\Debug\Hotel_DataAccess.pdb
+C:\Users\PC0\Desktop\basics\Hotel Management System\Hotel_Buisness\obj\Debug\Hotel_Bu.2F082605.Up2Date
