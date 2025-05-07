@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FBC8E81-03F0-43D9-8636-894CF6D84455}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EASendMail, Version=7.9.2.1, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>packages\EASendMail.7.9.2.1\lib\net481\EASendMail.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotel_Buisness">
+      <HintPath>..\Hotel_Buisness\bin\Debug\Hotel_Buisness.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Pkcs.8.0.0\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bookings\Controls\ctrlBookingCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bookings\Controls\ctrlBookingCardInfo.Designer.cs">
+      <DependentUpon>ctrlBookingCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bookings\frmAddEditBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookings\frmAddEditBooking.Designer.cs">
+      <DependentUpon>frmAddEditBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bookings\frmListBookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookings\frmListBookings.Designer.cs">
+      <DependentUpon>frmListBookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bookings\frmShowBookingInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookings\frmShowBookingInfo.Designer.cs">
+      <DependentUpon>frmShowBookingInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\frmSendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact\frmSendEmail.Designer.cs">
+      <DependentUpon>frmSendEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\Controls\ctrlGuestInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Guests\Controls\ctrlGuestInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlGuestInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance Requests\Controls\ctrlMaintenanceRequestCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance Requests\Controls\ctrlMaintenanceRequestCardInfo.Designer.cs">
+      <DependentUpon>ctrlMaintenanceRequestCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance Requests\frmAddEditMaintenanceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance Requests\frmAddEditMaintenanceRequest.Designer.cs">
+      <DependentUpon>frmAddEditMaintenanceRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance Requests\frmListMaintenanceRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance Requests\frmListMaintenanceRequests.Designer.cs">
+      <DependentUpon>frmListMaintenanceRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance Requests\frmShowMaintenanceRequestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance Requests\frmShowMaintenanceRequestInfo.Designer.cs">
+      <DependentUpon>frmShowMaintenanceRequestInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payments\Controls\ctrlPaymentCardInfo.Designer.cs">
+      <DependentUpon>ctrlPaymentCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.Designer.cs">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmShowPaymentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmShowPaymentInfo.Designer.cs">
+      <DependentUpon>frmShowPaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\Controls\ctrlRoomCardInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rooms\Controls\ctrlRoomCardInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlRoomCardInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BedTypes\frmAddEditBedType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BedTypes\frmAddEditBedType.Designer.cs">
+      <DependentUpon>frmAddEditBedType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BedTypes\frmListBedTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BedTypes\frmListBedTypes.Designer.cs">
+      <DependentUpon>frmListBedTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmListEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmListEmployee.Designer.cs">
+      <DependentUpon>frmListEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\frmAddEditFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\frmAddEditFeature.Designer.cs">
+      <DependentUpon>frmAddEditFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\frmListFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\frmListFeatures.Designer.cs">
+      <DependentUpon>frmListFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Floors\frmAddEditFloor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Floors\frmAddEditFloor.Designer.cs">
+      <DependentUpon>frmAddEditFloor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Floors\frmListFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Floors\frmListFloors.Designer.cs">
+      <DependentUpon>frmListFloors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\frmListGuests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\frmListGuests.Designer.cs">
+      <DependentUpon>frmListGuests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClassBedTypes\frmAddEditRoomClassBedTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClassBedTypes\frmAddEditRoomClassBedTypes.Designer.cs">
+      <DependentUpon>frmAddEditRoomClassBedTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\Controls\ctrlEmployeeCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees\Controls\ctrlEmployeeCardInfo.Designer.cs">
+      <DependentUpon>ctrlEmployeeCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmAddEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmAddEditEmployee.Designer.cs">
+      <DependentUpon>frmAddEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmShowEmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmShowEmployeeInfo.Designer.cs">
+      <DependentUpon>frmShowEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\Controls\ctrlGuestCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Guests\Controls\ctrlGuestCardInfo.Designer.cs">
+      <DependentUpon>ctrlGuestCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\frmAddEditGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\frmAddEditGuest.Designer.cs">
+      <DependentUpon>frmAddEditGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\frmShowGuestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\frmShowGuestInfo.Designer.cs">
+      <DependentUpon>frmShowGuestInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="people\Control\ctrlPersonCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="people\Control\ctrlPersonCardInfo.Designer.cs">
+      <DependentUpon>ctrlPersonCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsContact.cs" />
+    <Compile Include="Global\clsCryptography.cs" />
+    <Compile Include="Global\clsFormat.cs" />
+    <Compile Include="Global\clsGlobal.cs" />
+    <Compile Include="Global\clsUtil.cs" />
+    <Compile Include="Global\clsValidation.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomClassBedTypes\frmShowListBedTypesForRoomClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClassBedTypes\frmShowListBedTypesForRoomClass.Designer.cs">
+      <DependentUpon>frmShowListBedTypesForRoomClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClasses\frmAddEditRoomClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClasses\frmAddEditRoomClass.Designer.cs">
+      <DependentUpon>frmAddEditRoomClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClasses\frmListRoomClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClasses\frmListRoomClasses.Designer.cs">
+      <DependentUpon>frmListRoomClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClassFeature\frmAddRoomClassFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClassFeature\frmAddRoomClassFeatures.Designer.cs">
+      <DependentUpon>frmAddRoomClassFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClassFeature\frmShowListFeaturesForRoomClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClassFeature\frmShowListFeaturesForRoomClass.Designer.cs">
+      <DependentUpon>frmShowListFeaturesForRoomClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\Controls\ctrlRoomCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rooms\Controls\ctrlRoomCardInfo.Designer.cs">
+      <DependentUpon>ctrlRoomCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmAddEditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmAddEditRoom.Designer.cs">
+      <DependentUpon>frmAddEditRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmListRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmListRooms.Designer.cs">
+      <DependentUpon>frmListRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmShowRoomInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmShowRoomInfo.Designer.cs">
+      <DependentUpon>frmShowRoomInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bookings\Controls\ctrlBookingCardInfo.resx">
+      <DependentUpon>ctrlBookingCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bookings\frmAddEditBooking.resx">
+      <DependentUpon>frmAddEditBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bookings\frmListBookings.resx">
+      <DependentUpon>frmListBookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bookings\frmShowBookingInfo.resx">
+      <DependentUpon>frmShowBookingInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact\frmSendEmail.resx">
+      <DependentUpon>frmSendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\Controls\ctrlGuestInfoWithFilter.resx">
+      <DependentUpon>ctrlGuestInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance Requests\Controls\ctrlMaintenanceRequestCardInfo.resx">
+      <DependentUpon>ctrlMaintenanceRequestCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance Requests\frmAddEditMaintenanceRequest.resx">
+      <DependentUpon>frmAddEditMaintenanceRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance Requests\frmListMaintenanceRequests.resx">
+      <DependentUpon>frmListMaintenanceRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance Requests\frmShowMaintenanceRequestInfo.resx">
+      <DependentUpon>frmShowMaintenanceRequestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Controls\ctrlPaymentCardInfo.resx">
+      <DependentUpon>ctrlPaymentCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmListPayments.resx">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmShowPaymentInfo.resx">
+      <DependentUpon>frmShowPaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\Controls\ctrlRoomCardInfoWithFilter.resx">
+      <DependentUpon>ctrlRoomCardInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BedTypes\frmAddEditBedType.resx">
+      <DependentUpon>frmAddEditBedType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BedTypes\frmListBedTypes.resx">
+      <DependentUpon>frmListBedTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmListEmployee.resx">
+      <DependentUpon>frmListEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\frmAddEditFeature.resx">
+      <DependentUpon>frmAddEditFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\frmListFeatures.resx">
+      <DependentUpon>frmListFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Floors\frmAddEditFloor.resx">
+      <DependentUpon>frmAddEditFloor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Floors\frmListFloors.resx">
+      <DependentUpon>frmListFloors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\frmListGuests.resx">
+      <DependentUpon>frmListGuests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomClassBedTypes\frmAddEditRoomClassBedTypes.resx">
+      <DependentUpon>frmAddEditRoomClassBedTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\Controls\ctrlEmployeeCardInfo.resx">
+      <DependentUpon>ctrlEmployeeCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmAddEditEmployee.resx">
+      <DependentUpon>frmAddEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmShowEmployeeInfo.resx">
+      <DependentUpon>frmShowEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\Controls\ctrlGuestCardInfo.resx">
+      <DependentUpon>ctrlGuestCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\frmAddEditGuest.resx">
+      <DependentUpon>frmAddEditGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\frmShowGuestInfo.resx">
+      <DependentUpon>frmShowGuestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="people\Control\ctrlPersonCardInfo.resx">
+      <DependentUpon>ctrlPersonCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RoomClassBedTypes\frmShowListBedTypesForRoomClass.resx">
+      <DependentUpon>frmShowListBedTypesForRoomClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomClasses\frmAddEditRoomClass.resx">
+      <DependentUpon>frmAddEditRoomClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomClasses\frmListRoomClasses.resx">
+      <DependentUpon>frmListRoomClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomClassFeature\frmAddRoomClassFeatures.resx">
+      <DependentUpon>frmAddRoomClassFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomClassFeature\frmShowListFeaturesForRoomClass.resx">
+      <DependentUpon>frmShowListFeaturesForRoomClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\Controls\ctrlRoomCardInfo.resx">
+      <DependentUpon>ctrlRoomCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmAddEditRoom.resx">
+      <DependentUpon>frmAddEditRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmListRooms.resx">
+      <DependentUpon>frmListRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmShowRoomInfo.resx">
+      <DependentUpon>frmShowRoomInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\required.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPerson 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prev 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media_room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed_add%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Count 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human_resources %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesman %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesman %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salesman %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-details-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show_Employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-reset-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-feature-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-feature-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-feature-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border_diagonal_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomView1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomView_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomView_Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomView_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomView_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floor_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floor_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floor_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_cabin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_cabin_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_cabin_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_cabin_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ionic-Ionicons-Tv.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Devices-video-television.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\focus_group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human_resources %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-settings-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_cabin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-points-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-cash-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-credit-card-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-32 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maintenance-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-mark-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-discount-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bookings-32 %285%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\bin\Debug\net8.0\Hotel_DataAccess.deps.json
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\bin\Debug\net8.0\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\bin\Debug\net8.0\Hotel_DataAccess.pdb
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.AssemblyInfoInputs.cache
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.AssemblyInfo.cs
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\refint\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.pdb
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\ref\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Videos\Hotel Management System _Server Side On .net Core\Hotel_DataAccess\obj\Debug\net8.0\Hotel_DataAccess.csproj.AssemblyReference.cache

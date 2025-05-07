@@ -1,0 +1,13 @@
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\bin\Release\net8.0\Hotel_DataAccess.deps.json
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\bin\Release\net8.0\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\bin\Release\net8.0\Hotel_DataAccess.pdb
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.csproj.AssemblyReference.cache
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.AssemblyInfoInputs.cache
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.AssemblyInfo.cs
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.sourcelink.json
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\refint\Hotel_DataAccess.dll
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\Hotel_DataAccess.pdb
+C:\Users\DELL PRO\Desktop\Karim\My All Files\All Projects\Hotel Management System  03-09-2024\Version Back-End Server Side.(.net Core)\Hotel_DataAccess\obj\Release\net8.0\ref\Hotel_DataAccess.dll
